@@ -4,7 +4,7 @@ const counter = useLocalCounter();
 
 <template>
   <div>
-    Local Counter Composable: {{ counter.count }}
+    <p>Local Counter Composable: {{ counter.count }}</p>
     <UButton @click="counter.decrement">-</UButton>
     <UButton @click="counter.increment">+</UButton>
   </div>

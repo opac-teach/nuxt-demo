@@ -4,7 +4,7 @@ const counter = useCounter();
 
 <template>
   <div>
-    Global Counter: {{ counter.count }}
+    <p>Global Counter: {{ counter.count }}</p>
     <UButton @click="counter.decrement">-</UButton>
     <UButton @click="counter.increment">+</UButton>
   </div>

@@ -4,7 +4,7 @@ const username = useUsername();
 
 <template>
   <div>
-    Username: {{ username }}
+    <p>Username: {{ username }}</p>
     <UInput v-model="username" />
   </div>
 </template>

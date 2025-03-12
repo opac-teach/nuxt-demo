@@ -6,7 +6,7 @@ const counter = ref(0);
 
 <template>
   <div>
-    Ref Counter: {{ counter }}
+    <p>Ref Counter: {{ counter }}</p>
     <UButton @click="counter--">-</UButton>
     <UButton @click="counter++">+</UButton>
   </div>

@@ -6,7 +6,7 @@ const counter = useState("counter", () => 0);
 
 <template>
   <div>
-    UseState Counter: {{ counter }}
+    <p>UseState Counter: {{ counter }}</p>
     <UButton @click="counter--">-</UButton>
     <UButton @click="counter++">+</UButton>
   </div>
