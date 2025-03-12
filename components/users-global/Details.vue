@@ -3,14 +3,8 @@
     <div>
       <p>
         Status:
-        <span v-if="status === 'pending'" class="text-yellow-500"
-          >Loading...</span
-        >
-        <span v-if="!user" class="text-yellow-500">Aucune donnée</span>
-        <span v-if="status === 'error'" class="text-red-500"
-          >Error: {{ error }}</span
-        >
-        <span v-if="status === 'success'" class="text-green-500">Success</span>
+        <span v-if="user" class="text-green-500">Chargée</span>
+        <span v-if="!user" class="text-yellow-500">En cours de chargement</span>
       </p>
     </div>
     <div v-if="user">
@@ -21,15 +15,18 @@
         <li>Created At: {{ user.createdAt }}</li>
       </ul>
     </div>
-    <UButton @click="refresh">Refresh</UButton>
-    <UButton @click="clear">Clear</UButton>
+    <UButton @click="userStore.fetchUser(userId)">Refresh</UButton>
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
+const userStore = useUsersStore();
+
 const userId = Number(route.params.id);
-const { data: user, status, error, refresh, clear } = useUser(userId);
+const user = computed(() => userStore.user(userId));
+
+await callOnce(`user-${userId}`, () => userStore.fetchUser(userId));
 
 useSeoMeta({
   title: () => `User ${user.value?.name}`,
