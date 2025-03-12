@@ -1,6 +1,8 @@
-# Nuxt Minimal Starter
+# Nuxt Demo
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a demo of how to use Nuxt
+
+https://nuxt-demo-blush.vercel.app/
 
 ## Setup
 
