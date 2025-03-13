@@ -13,6 +13,11 @@ const links = [
     to: "/",
   },
   {
+    label: "Routing",
+    icon: "i-heroicons-share",
+    to: "/routing",
+  },
+  {
     label: "State",
     icon: "i-heroicons-cog",
     to: "/state",
