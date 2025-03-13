@@ -1,10 +1,10 @@
 export const useUsersStore = defineStore("users", {
   state: () => ({
-    userIds: [] as number[],
-    users: {} as Record<number, any>,
+    userIds: [] as string[],
+    users: {} as Record<string, any>,
   }),
   getters: {
-    user: (state) => (id: number | string) => state.users[Number(id)],
+    user: (state) => (id: string) => state.users[id],
   },
 
   actions: {
@@ -12,7 +12,7 @@ export const useUsersStore = defineStore("users", {
     async fetchUserIds() {
       this.userIds = await $fetch("/api/users");
     },
-    async fetchUser(id: number) {
+    async fetchUser(id: string) {
       this.users[id] = await $fetch(`/api/users/${id}`);
     },
   },

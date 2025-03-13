@@ -1,4 +1,4 @@
-export const useUser = (id: number) => {
+export const useUser = (id: string) => {
   return useFetch(`/api/users/${id}`, {
     method: "GET",
   });

@@ -23,7 +23,7 @@
 const route = useRoute();
 const userStore = useUsersStore();
 
-const userId = Number(route.params.id);
+const userId = route.params.id as string;
 const user = computed(() => userStore.user(userId));
 
 await callOnce(`user-${userId}`, () => userStore.fetchUser(userId));

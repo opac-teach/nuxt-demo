@@ -13,6 +13,8 @@
     "@highlightjs/vue-plugin": "^2.1.2",
     "@nuxt/ui": "^2.21.1",
     "@pinia/nuxt": "^0.10.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "jsonwebtoken": "^9.0.2",
     "nuxt": "^3.16.0",
     "pinia": "^3.0.1",
     "vue": "^3.5.13",

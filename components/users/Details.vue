@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const userId = Number(route.params.id);
+const userId = route.params.id as string;
 const { data: user, status, error, refresh, clear } = useUser(userId);
 
 useSeoMeta({
