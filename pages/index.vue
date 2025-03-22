@@ -21,9 +21,3 @@
     </ul>
   </div>
 </template>
-
-<script setup lang="ts">
-useHead({
-  title: "My Amazing Site",
-});
-</script>

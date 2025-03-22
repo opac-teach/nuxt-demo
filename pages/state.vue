@@ -40,7 +40,7 @@ const examples = [
     sourcesNames: ["GlobalStoreComponent", "GlobalStore"],
   },
   {
-    name: "Client Only fetching",
+    name: "Client Only",
     description:
       "Il est parfois necessaire d'acceder à des fonctions seulement dispo coté client.",
     components: [Username],

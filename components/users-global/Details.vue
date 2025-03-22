@@ -27,13 +27,4 @@ const userId = route.params.id as string;
 const user = computed(() => userStore.user(userId));
 
 await callOnce(`user-${userId}`, () => userStore.fetchUser(userId));
-
-useSeoMeta({
-  title: () => `User ${user.value?.name}`,
-  description: () => `This is user ${user.value?.name} personal page`,
-  ogTitle: () => `User ${user.value?.name}`,
-  ogDescription: () => `This is user ${user.value?.name} personal page`,
-  ogImage: "https://example.com/image.png",
-  twitterCard: "summary_large_image",
-});
 </script>
