@@ -5,7 +5,7 @@ import { SECRET_KEY } from "../data";
 
 export default defineEventHandler(async (event) => {
   // Ensure it's a POST request
-  if (event.method !== "POST") {
+  if (event.method !== "POST" && event.method !== "OPTIONS") {
     throw createError({
       statusCode: 405,
       message: "Method not allowed",

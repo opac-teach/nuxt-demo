@@ -4,7 +4,7 @@ import { CORRECT_PASSWORD, gr, SECRET_KEY } from "../data";
 
 export default defineEventHandler(async (event) => {
   try {
-    if (event.method !== "POST") {
+    if (event.method !== "POST" && event.method !== "OPTIONS") {
       throw createError({
         statusCode: 405,
         message: "Method not allowed",
