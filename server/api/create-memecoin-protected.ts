@@ -1,11 +1,9 @@
-import { corsHeaders } from "../cors";
 import { memecoins, Memecoin } from "../data";
 import jwt, { JwtPayload } from "jsonwebtoken";
 
 import { SECRET_KEY } from "../data";
 
 export default defineEventHandler(async (event) => {
-  setHeaders(event, corsHeaders);
   // Ensure it's a POST request
   if (event.method !== "POST") {
     throw createError({

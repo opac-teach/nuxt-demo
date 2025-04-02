@@ -1,9 +1,6 @@
 import { memecoins } from "../data";
-import { corsHeaders } from "../cors";
 
 export default defineEventHandler(async (event) => {
-  setHeaders(event, corsHeaders);
-
   if (event.method !== "GET") {
     throw createError({
       statusCode: 405,

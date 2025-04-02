@@ -1,10 +1,8 @@
 import jwt from "jsonwebtoken";
 
 import { CORRECT_PASSWORD, gr, SECRET_KEY } from "../data";
-import { corsHeaders } from "../cors";
 
 export default defineEventHandler(async (event) => {
-  setHeaders(event, corsHeaders);
   try {
     if (event.method !== "POST") {
       throw createError({
