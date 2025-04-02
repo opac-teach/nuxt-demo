@@ -1,6 +1,8 @@
+import { corsHeaders } from "../cors";
 import { memecoins, users, Memecoin, gr } from "../data";
 
 export default defineEventHandler(async (event) => {
+  setHeaders(event, corsHeaders);
   // Ensure it's a POST request
   if (event.method !== "POST") {
     throw createError({
