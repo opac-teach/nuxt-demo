@@ -4,8 +4,13 @@ import jwt, { JwtPayload } from "jsonwebtoken";
 import { SECRET_KEY } from "../data";
 
 export default defineEventHandler(async (event) => {
-  // Ensure it's a POST request
-  if (event.method !== "POST" && event.method !== "OPTIONS") {
+  if (event.method === "OPTIONS") {
+    return {
+      message: "OK",
+    };
+  }
+
+  if (event.method !== "POST") {
     throw createError({
       statusCode: 405,
       message: "Method not allowed",
