@@ -25,7 +25,7 @@ const examples = [
   {
     name: "Utilisateurs (stores)",
     description:
-      "Si une donnée récupérée d'une API doit être utilisée a plusieurs endroits, on aura tendance à la stocker dans un store Pinia",
+      "Si une donnée récupérée d'une API doit être utilisée a plusieurs endroits, on aura tendance à la stocker dans un store Pinia. <br/> La fonction <code>callOnce</code> remplace d'une certaine façon le <code>onMounted</code> et garanti que la fonction ne sera appellée qu'une fois entre le client et le serveur. <br/> Pour récuperer des données sans <code>useFetch</code>, on peut utiliser <code>$fetch</code> qui est une abstraction de <code>fetch</code> en client ou server.",
     components: [UsersListGlobal, UsersListGlobal],
     sources: [UsersListGlobalSource, UsersStoreSource],
     sourcesNames: ["UsersStoreList", "UsersStore"],
