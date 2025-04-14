@@ -82,7 +82,7 @@ watch(form, (newForm) => {
 </script>
 
 <template>
-    <div class="w-full">
+    <div class="w-[50vw] mx-auto">
         <h1 class="text-4xl font-bold text-center text-primary mb-6">Viens créer ta crypto !</h1>
         <form @submit.prevent="publishCoin" class="flex flex-col gap-4">
                 <label for="name" class="block">Nom de la crypto (4-12) :</label>
@@ -119,9 +119,9 @@ watch(form, (newForm) => {
                     <p v-if="error" class="text-red-500">{{ error }}</p>
                     <p v-if="successMessage" class="text-green-500 mt-4 text-center">{{ successMessage }}</p>
                 </div>
-                <button  type="submit" class="btn btn-primary">
-                Soumettre
-            </button>
+                <button  type="submit" class="btn bg-primary text-white rounded-xl w-full p-2">
+                    Soumettre
+                </button>
         </form>
     </div>
 </template>
