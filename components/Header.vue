@@ -27,6 +27,11 @@ const links = [
     icon: "i-heroicons-user",
     to: "/users",
   },
+  {
+    label: "Exercices",
+    icon: "i-heroicons-user-group",
+    to: "/exercices",
+  },
 ];
 </script>
 
