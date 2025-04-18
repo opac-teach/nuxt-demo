@@ -37,7 +37,7 @@ async function publishCoin() {
   try {
     const body = JSON.stringify(form)
     console.log('Formulaire soumis:', body)
-    const response = await fetch('https://nuxt-demo-blush.vercel.app/api/create-memecoin', {
+    const response = await fetch('api/create-memecoin-protected', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: body
