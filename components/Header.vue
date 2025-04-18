@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const links = [
+import { computed } from 'vue'
+import { useAuthentificationStore } from '../stores/authentificationToken'
+
+const auth = useAuthentificationStore()
+
+
+
+const baseLinks = [
   {
     label: "Vue Demo",
     avatar: {
@@ -27,14 +34,33 @@ const links = [
     icon: "i-heroicons-user",
     to: "/users",
   },
+  {
+    label: "Exercices",
+    icon: "i-heroicons-user",
+    to: "/exercices",
+  }
 ];
+
+const links = computed(() => {
+  const authLink = auth.isLoggedIn
+    ? {
+      label: 'Déconnexion',
+      icon: 'i-heroicons-arrow-left-on-rectangle',
+      click: () => auth.deconnexion(),
+    }
+    : {
+      label: "Authentification",
+      icon: "i-heroicons-user",
+      to: "/authentification",
+    }
+
+  return [...baseLinks, authLink]
+})
+
 </script>
 
 <template>
   <header>
-    <UHorizontalNavigation
-      :links="links"
-      class="border-b border-gray-200 dark:border-gray-800"
-    />
+    <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
   </header>
 </template>

@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  if (Math.random() < 0.2) {
+  if (false) {
     throw createError({
       statusCode: 500,
       message: "Random server error",
