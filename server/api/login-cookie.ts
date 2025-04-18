@@ -48,7 +48,7 @@ export default defineEventHandler(async (event) => {
 
     // Set JWT token as HTTP-only cookie
     setCookie(event, "auth_token", token, {
-      httpOnly: false,
+      httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
       maxAge: 24 * 60 * 60, // 1 day in seconds

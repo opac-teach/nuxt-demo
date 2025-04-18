@@ -57,10 +57,10 @@ export const memecoins: Memecoin[] = [
   },
   {
     id: gr(),
-    name: "Memecoin 3",
+    name: "Memecoin 2",
     owner: users[1].id,
     symbol: sr(),
-    description: "Memecoin 3 description",
+    description: "Memecoin 2 description",
     logoUrl: "https://picsum.photos/seed/memecoin3/50/50",
   },
 ];
