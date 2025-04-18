@@ -2,6 +2,9 @@
 type Errors = Record<string, string | null >
 
 import { useEtatConnexionStore } from "../stores/cookie.ts";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const etatConnexionStore = useEtatConnexionStore()
 
@@ -52,6 +55,7 @@ async function getCoins(){
     });
 }
 
+
 const { data: coins, status, error , refresh } = await getCoins()
 
 
@@ -76,24 +80,28 @@ async function publishCoin(){
     }
 }
 
+function goToCoin(id: string) {
+  router.push(`/coin/${id}`);
+}
+
 
 
 </script>
   
 <template>
 
-    <div class="flex flex-col space-y-4">
+    <div class="flex flex-col  space-y-4">
 
         <div class="bg-green-600 p-5 text-lg text-center font-bold rounded-lg text-white"> {{ etatConnexionStore.etat ? "Etat : Connecté" : "Etat : Invité" }}</div>
 
-        <div class="flex flex-row space-x-12">
+        <div class="flex flex-row h-full space-x-12">
 
             <div class="mx-auto p-4 rounded-lg bg-gray-200">
                 <h1 class="text-4xl text-center mb-8 text font-bold" >Liste des MemeCoins Disponible sur la plateforme</h1>
                 <p class="text-4xl font-bold text-red-700 text-center mt-50" v-if="!etatConnexionStore.etat">Veuillez vous connecter pour acceder aux coins</p>
                 <ul v-if="etatConnexionStore.etat" class=" text-clip grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     <li v-for="coin in coins" :key="coin.id">
-                        <div class="flex items-center justify-between bg-gray-800 p-4 mb-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div @click="goToCoin(coin.id)" class="flex items-center justify-between bg-gray-800 p-4 mb-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                             <img :src="coin.logoUrl" alt="Logo du coin" class="h-16 w-16 rounded-full object-cover mr-4" />
                                 <div class="flex flex-col">
                                     <span class="text-green-500 font-bold text-xs">{{ coin.name }}</span>
