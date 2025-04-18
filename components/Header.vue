@@ -1,40 +1,41 @@
 <script setup lang="ts">
+import { useEtatConnexionStore } from "@/stores/etatConnexion";
+const etatConnexion = useEtatConnexionStore() ;
+
 const links = [
   {
-    label: "Vue Demo",
+    label: "Esteban Russias",
     avatar: {
       src: "/favicon.ico",
     },
     badge: "SSR",
   },
   {
-    label: "Home",
+    label: "Exercices",
     icon: "i-heroicons-home",
-    to: "/",
+    to: "/exercices",
   },
   {
-    label: "Routing",
-    icon: "i-heroicons-share",
-    to: "/routing",
-  },
-  {
-    label: "State",
-    icon: "i-heroicons-cog",
-    to: "/state",
-  },
-  {
-    label: "Data fetching",
+    label: "Create",
     icon: "i-heroicons-user",
-    to: "/users",
+    to: "/create",
+  },
+  {
+    label: "Connect",
+    icon: "i-heroicons-user",
+    to: "/connect",
   },
 ];
 </script>
 
 <template>
-  <header>
-    <UHorizontalNavigation
-      :links="links"
-      class="border-b border-gray-200 dark:border-gray-800"
-    />
+  <header class="flex justify-between items-center px-4 py-2 border-b border-gray-200 dark:border-gray-800">
+    <UHorizontalNavigation :links="links" />
+    <div class="text-sm font-medium">
+      <p>État :</p>
+      <span :class="etatConnexion.estConnecte ? 'text-green-600' : 'text-red-600'">
+        {{ etatConnexion.estConnecte ? 'Connecté' : 'Déconnecté' }}
+      </span>
+    </div>
   </header>
 </template>
