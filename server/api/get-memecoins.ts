@@ -8,12 +8,5 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  if (Math.random() < 0.2) {
-    throw createError({
-      statusCode: 500,
-      message: "Random server error",
-    });
-  }
-
   return memecoins;
 });
