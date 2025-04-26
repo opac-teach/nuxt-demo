@@ -4,6 +4,10 @@ This is a demo of how to use Nuxt
 
 https://nuxt-demo-blush.vercel.app/
 
+### Course content
+
+https://teach.opac.me/cours/dev-frontend/nuxt
+
 ## Setup
 
 Make sure to install dependencies:
