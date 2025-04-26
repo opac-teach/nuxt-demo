@@ -27,6 +27,21 @@ const links = [
     icon: "i-heroicons-user",
     to: "/users",
   },
+  {
+    label: "Liste",
+    icon: "i-heroicons-list-bullet",
+    to: "/exercices",
+  },
+  {
+    label: "Création",
+    icon: "i-heroicons-plus-circle",
+    to: "/coin-form",
+  },
+  {
+    label: "Se connecter",
+    icon: "i-heroicons-user",
+    to: "/auth-form",
+  },
 ];
 </script>
 
@@ -36,5 +51,6 @@ const links = [
       :links="links"
       class="border-b border-gray-200 dark:border-gray-800"
     />
+    <Profile />
   </header>
 </template>

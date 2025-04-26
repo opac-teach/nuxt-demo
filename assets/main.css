@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    emerald --default,
+    synthwave --prefersdark;
+}
+
+@import './highlight.css';
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+@custom-variant dark (&:where([data-theme=synthwave], [data-theme=synthwave] *));
+
+@layer base {
+  code {
+    @apply text-accent-content;
+  }
+}
