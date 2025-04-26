@@ -1,0 +1,140 @@
+/*!
+  Theme: StackOverflow Dark
+  Description: Dark theme as used on stackoverflow.com
+  Author: stackoverflow.com
+  Maintainer: @Hirse
+  Website: https://github.com/StackExchange/Stacks
+  License: MIT
+  Updated: 2021-05-15
+
+  Updated for @stackoverflow/stacks v0.64.0
+  Code Blocks: /blob/v0.64.0/lib/css/components/_stacks-code-blocks.less
+  Colors: /blob/v0.64.0/lib/css/exports/_stacks-constants-colors.less
+*/
+
+:root {
+  --hljs-text: #2f3337;
+  --hljs-background: #f6f6f6;
+  --hljs-comment: #656e77;
+  --hljs-keyword: #015692;
+  --hljs-attribute: #015692;
+  --hljs-symbol: #803378;
+  --hljs-namespace: #b75501;
+  --hljs-variable: #54790d;
+  --hljs-literal: #b75501;
+  --hljs-punctuation: #535a60;
+  --hljs-deletion: #c02d2e;
+  --hljs-addition: #2f6f44;
+}
+
+html.dark {
+  --hljs-text: #ffffff;
+  --hljs-background: #1c1b1b;
+  --hljs-comment: #999999;
+  --hljs-keyword: #88aece;
+  --hljs-attribute: #88aece;
+  --hljs-symbol: #c59bc1;
+  --hljs-namespace: #f08d49;
+  --hljs-variable: #b5bd68;
+  --hljs-literal: #f08d49;
+  --hljs-punctuation: #cccccc;
+  --hljs-deletion: #de7176;
+  --hljs-addition: #76c490;
+}
+
+.hljs {
+  color: var(--hljs-text);
+  background: var(--hljs-background);
+}
+
+.hljs-subst {
+  color: var(--hljs-text);
+}
+
+.hljs-comment {
+  color: var(--hljs-comment);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag,
+.hljs-section {
+  color: var(--hljs-keyword);
+}
+
+.hljs-attr {
+  color: var(--hljs-keyword);
+}
+
+.hljs-attribute {
+  color: var(--hljs-symbol);
+}
+
+.hljs-name,
+.hljs-type,
+.hljs-number,
+.hljs-selector-id,
+.hljs-quote,
+.hljs-template-tag {
+  color: var(--hljs-namespace);
+}
+
+.hljs-selector-class {
+  color: var(--hljs-keyword);
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr {
+  color: var(--hljs-variable);
+}
+
+.hljs-meta,
+.hljs-selector-pseudo {
+  color: var(--hljs-keyword);
+}
+
+.hljs-built_in,
+.hljs-title,
+.hljs-literal {
+  color: var(--hljs-literal);
+}
+
+.hljs-bullet,
+.hljs-code {
+  color: var(--hljs-punctuation);
+}
+
+.hljs-meta .hljs-string {
+  color: var(--hljs-variable);
+}
+
+.hljs-deletion {
+  color: var(--hljs-deletion);
+}
+
+.hljs-addition {
+  color: var(--hljs-addition);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-formula,
+.hljs-operator,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}
