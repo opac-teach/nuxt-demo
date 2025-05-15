@@ -1,4 +1,4 @@
-import { memecoins } from "../data";
+import { memecoins } from "~/server/data";
 
 export default defineEventHandler(async (event) => {
   if (event.method !== "GET" && event.method !== "OPTIONS") {
