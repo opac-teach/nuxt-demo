@@ -8,6 +8,7 @@
       <li>Rendu entièrement côté client possible (CSR)</li>
       <li>Imports automatiques (composants, fonctions du framework)</li>
       <li>Routing automatique et structure fixe</li>
+      <li>Endpoints server</li>
       <li>NuxtUI pour un design rapide et efficace</li>
     </ul>
     <h2>Liens utiles</h2>

@@ -46,6 +46,29 @@
         </ul>
       </li>
     </ul>
+    <p>Nuxt permet aussi de créer des endpoints serveur, qui peut servir à créer des API.</p>
+    <ul class="list-disc">
+      <li>
+        <h3>server/</h3>
+        <ul class="ml-4">
+          <li>
+            <h4>api/</h4>
+            <ul class="ml-4">
+              <li>
+                <h4>users/</h4>
+
+                <ul class="ml-4">
+                  <li>
+                    <h4>index.ts</h4>
+                    <h4>[id].ts</h4>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </template>
 

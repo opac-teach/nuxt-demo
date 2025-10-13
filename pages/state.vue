@@ -61,7 +61,7 @@ const examples = [
   {
     name: "UseState",
     description:
-      "UseState est fait pour être resilient aux changements de valeur initiale, et sa valeur est transferée au client lors de l'hydration. <br/> Ce pendant sa valeur est globale et partagée dans l'app. ",
+      "UseState est fait pour être resilient aux changements de valeur initiale, et sa valeur est transferée au client lors de l'hydration. <br/> Cependant sa valeur est globale et partagée dans l'app. ",
     components: [UseState, UseState],
     sources: [UseStateSource],
   },
